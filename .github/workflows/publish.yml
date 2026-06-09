@@ -1,0 +1,19 @@
+name: Go module release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - run: go test ./...
+      - name: Proxy cache trigger
+        run: |
+          curl -s "https://sum.golang.org/lookup/github.com/nljerry/wesender-go@${{ github.event.release.tag_name }}" || true
+          curl -s "https://proxy.golang.org/github.com/nljerry/wesender-go/@v/${{ github.event.release.tag_name }}.info" || true
