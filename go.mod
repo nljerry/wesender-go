@@ -1,3 +1,3 @@
-module github.com/nljerry/wesender-go
+module github.com/wesender/wesender-go
 
 go 1.21

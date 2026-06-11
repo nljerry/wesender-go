@@ -5,7 +5,7 @@ Officiële Go SDK voor de [WeSender](https://wesender.nl) e-mail API.
 ## Installatie
 
 ```bash
-go get github.com/nljerry/wesender-go
+go get github.com/wesender/wesender-go
 ```
 
 ## Gebruik
@@ -15,7 +15,7 @@ package main
 
 import (
     "fmt"
-    wesender "github.com/nljerry/wesender-go"
+    wesender "github.com/wesender/wesender-go"
 )
 
 func main() {
@@ -46,4 +46,4 @@ Go 1.21+
 ## Links
 
 - [Documentatie](https://wesender.nl/docs/sdks/go)
-- [Issues](https://github.com/nljerry/wesender-go/issues)
+- [Issues](https://github.com/wesender/wesender-go/issues)

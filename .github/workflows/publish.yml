@@ -15,5 +15,5 @@ jobs:
       - run: go test ./...
       - name: Proxy cache trigger
         run: |
-          curl -s "https://sum.golang.org/lookup/github.com/nljerry/wesender-go@${{ github.event.release.tag_name }}" || true
-          curl -s "https://proxy.golang.org/github.com/nljerry/wesender-go/@v/${{ github.event.release.tag_name }}.info" || true
+          curl -s "https://sum.golang.org/lookup/github.com/wesender/wesender-go@${{ github.event.release.tag_name }}" || true
+          curl -s "https://proxy.golang.org/github.com/wesender/wesender-go/@v/${{ github.event.release.tag_name }}.info" || true
